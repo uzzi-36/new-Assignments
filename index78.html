@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Chapters(1,2,3,4,5,6-9)</h2>
+    <nav>
+      <li><a href="./index12.html">Assignments1</a></li>
+      <li><a href="./index23.html">Assignments2</a></li>
+      <li><a href="./index34.html">Assignments3</a></li>
+      <li><a href="./index56.html">Assignments4</a></li>
+      <li><a href="./index78.html">Assignments5</a></li>
+    </nav>
+    <br />
+    <br />
+    <br />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Total Marks</th>
+          <th>Obtained Marks</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>English</td>
+          <td>100</td>
+          <td id="engMarks"></td>
+          <td id="engPerc"></td>
+        </tr>
+        <tr>
+          <td>Maths</td>
+          <td>100</td>
+          <td id="mathMarks"></td>
+          <td id="mathPerc"></td>
+        </tr>
+        <tr>
+          <td>Urdu</td>
+          <td>100</td>
+          <td id="urduMarks"></td>
+          <td id="urduPerc"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>300</td>
+          <td id="totObt"></td>
+          <td id="avgPerc"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+    //Q3
+
+    let name = prompt("Enter your name :");
+    alert(`Hey ${name}!`);
+
+    //Q6
+    let subj1Mark = prompt("Enter marks in Maths : ");
+    let subj2Mark = prompt("Enter marks in English : ");
+    let subj3Mark = prompt("Enter subject Urdu : ");
+
+    let totalMarksObt = subj1Mark + subj2Mark + subj3Mark;
+    let avgPerc = (totalMarksObt / 300) * 100;
+
+    document.querySelector("#mathMarks").innerHTML = subj1Mark;
+    document.querySelector("#engMarks").innerHTML = subj2Mark;
+    document.querySelector("#urduMarks").innerHTML = subj3Mark;
+    document.querySelector("#mathPerc").innerHTML = subj1Mark + "%";
+    document.querySelector("#engPerc").innerHTML = subj2Mark + "%";
+    document.querySelector("#urduPerc").innerHTML = subj3Mark + "%";
+    document.querySelector("#totObt").innerHTML = totalMarksObt;
+    document.querySelector("#avgPerc").innerHTML = avgPerc;
+  </script>
+</html>
